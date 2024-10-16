@@ -1,11 +1,33 @@
-##Google Colab 部署自己的机器学习项目
+# Google Colab 部署自己的机器学习项目
 
 目录
+
 1. 介绍
+
 2.准备工作
+
 3.步骤
+
   3.1 进入 google driver：https://drive.google.com
+
   3.2 右键上传项目所在的文件夹：
+
+  3.3 进入 colab：点击左上角 “新建” --> “更多” --> “Colaboratory”
+
+  3.4 “Edit” --> “Notebook settings” -->
+
+  3.5 代码段里面输入
+
+  3.6 代码段里面输入
+
+  3.7 代码段里面输入
+
+4 注意事项
+
+  3.1 进入 google driver：https://drive.google.com
+  
+  3.2 右键上传项目所在的文件夹：
+  
    ![image]()
    ![image]()
    ![image]()
