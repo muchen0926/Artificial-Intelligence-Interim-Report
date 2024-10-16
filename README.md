@@ -1,103 +1,101 @@
-# Google Colab 部署自己的机器学习项目
+# Google Colab 部署自己的機器學習項目
 
-## 目录
+## 目錄
 
-1.介绍
+1. 介紹
+ 
+2. 準備工作
+   
+3. 步驟
+   
+   - 3.1 進入 google driver: https://drive.google.com
+     
+   - 3.2 右鍵上傳項目所在的文件夾
+     
+   - 3.3 進入 colab: 點擊左上角 `新建` --> `更多` --> `Colaboratory`
+     
+   - 3.4 `Edit` --> `Notebook settings` -->
 
-2.准备工作
+   - 3.5 代碼段裡面輸入
+     
+   - 3.6 代碼段裡面輸入
+     
+   - 3.7 代碼段裡面輸入
+     
+4. 注意事項
 
-3.步骤
+## 1. 介紹
 
-  3.1 进入 google driver：https://drive.google.com
+Google Colab 提供的是免費 Tesla K80 GPU，可以玩 Keras、Tensorflow、PyTorch 或者 Mxnet 等。Tesla K80 還是一塊比較高性能的 GPU。主要是免費，免費，免費！！！好像這次真的薅資本主義羊毛了，個人試了幾天，感覺還不錯。剛入手的時候稍微有點麻煩，大部分的網上教程都是在 Colab 上手動寫代碼玩玩兒，但是我是自己在本地寫好了一個小的項目，然後相互之間 import 有點麻煩，最後自己摸索總結出了一套最簡單的上傳自己項目，用 Colab 跑出結果的方法。
 
-  3.2 右键上传项目所在的文件夹：
+## 2. 準備工作
 
-  3.3 进入 colab：点击左上角 “新建” --> “更多” --> “Colaboratory”
+- 註冊一個谷歌賬號
+- 用自己的谷歌賬號使用 Google Driver
+- 自己的項目在本地調試通過，放在一個文件夾裡面（包含數據集，最好是英文名字）
 
-  3.4 “Edit” --> “Notebook settings” -->
+## 3. 步驟
 
-  3.5 代码段里面输入
+### 3.1 進入 google driver: https://drive.google.com
 
-  3.6 代码段里面输入
+### 3.2 右鍵上傳項目所在的文件夾
 
-  3.7 代码段里面输入
-
-4 注意事项
-
-## 1. 介绍
-Google Colab提供的是免费Tesla K80 GPU，可以玩Keras、Tensorflow、PyTorch或者Mxnet等。Tesla K80还是一块比较高性能的GPU。主要是免费，免费，免费 ！！！ 好像这次真的薅资本主义羊毛了，个人试了几天，感觉还不错。刚入手的时候稍微有点麻烦，大部分的网上教程都是在 Colab 上手动写代码玩玩儿，但是我是自己在本地写好了一个小的项目，然后相互之间 import 有点麻烦，最后自己摸索总结出了一套最简单的上传自己项目，用 colab 跑出结果的方法。
-
-## 2.准备工作
-
-．谷歌一系列，所以先得出去
-
-．注册一个谷歌账号
-
-．用自己的谷歌账号使用 google driver
-
-．自己的项目在本地调试通过，放在一个文件夹里面（包含数据集，最好是英文名字）
-
-## 3.步骤
-
-### 3.1 进入 google driver：https://drive.google.com
-  
-### 3.2 右键上传项目所在的文件夹：
-  
 ![image]()
 ![image]()
 ![image]()
 
-我这里简单地上传了一个名为 test 的文件夹，里面只有一个 main.py 的文件，代码也很简单，但是可以简单测试 Pytorch 的使用。
+我這裡簡單地上傳了一個名為 `test` 的文件夾，裡面只有一個 `main.py` 的文件，代碼也很簡單，但是可以簡單測試 PyTorch 的使用。
 
-### 3.3 进入 colab：点击左上角 “新建” --> “更多” --> “Colaboratory”
-
-![image]()
-![image]()
-
-### 3.4 “Edit” --> “Notebook settings” -->
+### 3.3 進入 colab: 點擊左上角 `新建` --> `更多` --> `Colaboratory`
 
 ![image]()
+![image]()
 
-这里我选择的 Python3 （根据自己代码依赖的环境） 和 GPU，如果要用 GPU 这一步必须调整好。每次调整这里的设置，后面的步骤都要再次进行。所以推荐这里设置好
+### 3.4 `Edit` --> `Notebook settings` -->
 
 ![image]()
 
-### 3.5 代码段里面输入
+這裡我選擇的是 Python3 （根據自己代碼依賴的環境） 和 GPU。如果要用 GPU 這一步必須調整好。每次調整這裡的設置，後面的步驟都要再次進行。所以推薦這裡設置好。
+
+![image]()
+
+### 3.5 代碼段裡面輸入
+
 
     from google.colab import drive
-    drive.mount(’/content/drive/’)
+    drive.mount('/content/drive/')
    
-然后点击左侧的运行图标，或者 Ctrl + Enter 运行。这时候会出现
+然後點擊左側的運行圖標，或者 Ctrl + Enter 運行。這時候會出現：
 
 ![image]()
 
-点击 URL 进入，授权 Google 用户，然后复制授权码粘贴到输入框，Enter。这个时候回显示挂载成功
+點擊 URL 進入，授權 Google 用戶，然後複製授權碼粘貼到輸入框，Enter。這個時候會顯示掛載成功。
 
 ![image]()
 
-这里可以输入
+這裡可以輸入：
 
     !ls
 
 ![image]()
 
-可以看到此目录下文件。
+可以看到此目錄下的文件。
 
-### 3.6 代码段里面输入
+### 3.6 代碼段裡面輸入
 
     import os
     os.chdir(“drive/My Drive/test”)
 
-最后一个 test 是其实是自己的项目名。这个时候没有任何提示信息，因为是 Linux 内核，所以按照 Linux 的思想：没有消息就是最好的消息。说明一切顺利。
-这里可以输入
+最後一個 test 是自己的項目名。這個時候沒有任何提示信息，因為是 Linux 內核，所以按照 Linux 的思想：沒有消息就是最好的消息。說明一切順利。 
+這裡可以輸入：
 
     !ls
    
 ![image]()
 
-可以看到我们写的 main.py 文件。
+可以看到我們寫的 main.py 文件。
 
-###　3.7 代码段里面输入
+###　3.7 代碼段裡面輸入
 
     !python main.py
 
@@ -105,9 +103,9 @@ Google Colab提供的是免费Tesla K80 GPU，可以玩Keras、Tensorflow、PyTo
 
 成功搞定~
   
-## 4 注意事项
+## 4. 注意事項
 
-1.虽然是 Linux 内核，但是每次类似于 Linux 的语句之前要多一个 “!” 。比如步骤 3.6， 3.7
-
-2.步骤 3.6 第二个语句最后一个路径名称根据自己上传到 Google Driver 的文件夹的名字而定，我上传的是 “test ”，所以最后一个路径是“test”。
+1. 雖然是 Linux 內核，但是每次類似於 Linux 的語句之前要多一個 !。比如步驟 3.6 和 3.7。
+  
+2. 步驟 3.6 第二個語句最後一個路徑名稱根據自己上傳到 Google Driver 的文件夾的名字而定，我上傳的是 test，所以最後一個路徑是 test。
 
