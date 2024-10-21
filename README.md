@@ -110,5 +110,5 @@ Google Colab 提供的是免費 Tesla K80 GPU，可以玩 Keras、Tensorflow、P
   
 2. 步驟 3.6 第二個語句最後一個路徑名稱根據自己上傳到 Google Driver 的文件夾的名字而定，我上傳的是 test，所以最後一個路徑是 test。
 
-## 5. 測試影片
+## 5. 實作測試影片
 https://youtu.be/Fb83KF6glTQ
